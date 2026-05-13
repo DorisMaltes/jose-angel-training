@@ -98,7 +98,11 @@ export default function Navbar() {
               <a
                 href={l.href}
                 onClick={closeMenu}
-                className="block text-white/70 hover:text-[#E7AE06] text-sm tracking-widest uppercase transition-colors py-2 border-b border-white/5"
+                className={
+                  l.highlight
+                    ? 'block text-[#E7AE06] font-bold text-sm tracking-widest uppercase transition-colors py-2 border-b border-[#E7AE06]/20'
+                    : 'block text-white/70 hover:text-[#E7AE06] text-sm tracking-widest uppercase transition-colors py-2 border-b border-white/5'
+                }
               >
                 {l.label}
               </a>
