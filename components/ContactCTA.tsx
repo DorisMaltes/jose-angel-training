@@ -49,22 +49,8 @@ export default function ContactCTA() {
           </a>
         </div>
 
-        {/* Stats row */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 pt-8 border-t border-white/10">
-          {[
-            { label: 'Seguidores', value: '5,482' },
-            { label: 'Publicaciones', value: '280+' },
-            { label: 'Clientes Activos', value: '21+' },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="font-display text-3xl text-[#E7AE06] tracking-wide">{stat.value}</p>
-              <p className="text-white/35 text-xs tracking-widest uppercase mt-1">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-
         {/* Instagram handle */}
-        <div className="mt-10">
+        <div className="mt-0 pt-8 border-t border-white/10">
           <a
             href="https://www.instagram.com/joseangel_training"
             target="_blank"
