@@ -59,35 +59,6 @@ export default function WhyUs() {
           <div className="w-16 h-0.5 bg-[#E7AE06] mt-6" />
         </div>
 
-        {/* VS Bar */}
-        <div className="bg-[#0a0a0a] border border-[#E7AE06]/20 p-6 lg:p-8 mb-12 flex flex-col sm:flex-row items-center gap-6 lg:gap-0">
-          <div className="flex-1 text-center sm:text-left">
-            <p className="text-white/35 text-[10px] tracking-[0.3em] uppercase mb-2">Gimnasio convencional</p>
-            <p className="font-display text-3xl text-white/50 tracking-wide">$800–$1,200 / mes</p>
-            <p className="text-white/30 text-xs mt-1">Sin atención personalizada · Sin plan · Sin seguimiento</p>
-          </div>
-
-          <div className="w-px h-16 bg-white/10 hidden sm:block mx-8" />
-          <div className="text-white/25 font-display text-3xl tracking-widest hidden sm:block">VS</div>
-          <div className="text-white/25 font-bold text-sm sm:hidden">VS</div>
-          <div className="w-px h-16 bg-white/10 hidden sm:block mx-8" />
-
-          <div className="flex-1 text-center sm:text-right">
-            <p className="text-[#E7AE06] text-[10px] tracking-[0.3em] uppercase mb-2 font-bold">José Ángel — Plan básico</p>
-            <p className="font-display text-3xl text-[#E7AE06] tracking-wide">$600–$800 / mes</p>
-            <p className="text-white/50 text-xs mt-1">Plan personalizado · Corrección técnica · Seguimiento real</p>
-          </div>
-        </div>
-
-        <div className="bg-[#E7AE06]/8 border border-[#E7AE06]/20 px-6 py-4 mb-16 flex items-start gap-3">
-          <span className="text-[#E7AE06] text-lg flex-shrink-0">💡</span>
-          <p className="text-white/70 text-sm leading-relaxed">
-            <span className="text-white font-medium">Este es el argumento ganador:</span>{' '}
-            por lo mismo que pagas en un gym, tienes entrenador personal de alto rendimiento.
-            El cliente no siente que gasta más — siente que obtiene mucho más por su dinero.
-          </p>
-        </div>
-
         {/* Reasons grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((reason) => (
