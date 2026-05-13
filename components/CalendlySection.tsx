@@ -15,7 +15,7 @@ export default function CalendlySection() {
 
         {/* Section header */}
         <div className="text-center mb-12">
-          <p className="text-[#E7AE06] text-xs tracking-[0.5em] uppercase font-bold mb-4">
+          <p className="text-[#E7AE06] text-xs tracking-[0.5em] uppercase font-bold mb-4 pt-6">
             Sin costo · Sin compromiso
           </p>
           <h2 className="font-display text-[clamp(2.8rem,7vw,5.5rem)] text-white leading-none tracking-wide mb-4">
@@ -24,7 +24,7 @@ export default function CalendlySection() {
           </h2>
           <div className="w-16 h-0.5 bg-[#E7AE06] mx-auto mb-6" />
           <p className="text-white/50 text-base max-w-xl mx-auto leading-relaxed">
-            30 minutos contigo para evaluar tu nivel, entender tus metas y diseñar el plan exacto que necesitas.
+            15 minutos contigo para evaluar tu nivel, entender tus metas y diseñar el plan exacto que necesitas.
             Sin rodeos — saldrás sabiendo exactamente qué hacer.
           </p>
         </div>
@@ -32,8 +32,8 @@ export default function CalendlySection() {
         {/* Feature pills */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {[
-            '⏱ 30 minutos',
-            '📍 Presencial o Videollamada',
+            '⏱ 15 minutos',
+            '📍 Videollamada',
             '🎯 Evaluación de objetivos',
             '📋 Plan preliminar incluido',
             '✅ 100% Gratuita',
