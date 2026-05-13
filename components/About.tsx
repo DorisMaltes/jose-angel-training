@@ -67,8 +67,8 @@ export default function About() {
 
             {/* Floating stat card */}
             <div className="absolute bottom-8 -right-4 lg:-right-8 bg-black border border-[#E7AE06]/30 p-5 shadow-2xl z-20">
-              <p className="text-[#E7AE06] text-3xl font-display tracking-wider">+5K</p>
-              <p className="text-white/50 text-xs tracking-widest uppercase mt-1">Seguidores en Instagram</p>
+              <p className="text-[#E7AE06] text-3xl font-display tracking-wider">100%</p>
+              <p className="text-white/50 text-xs tracking-widest uppercase mt-1">Planes Personalizados</p>
             </div>
           </div>
 
