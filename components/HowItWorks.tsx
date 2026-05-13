@@ -89,8 +89,6 @@ export default function HowItWorks() {
                 }`}>
                   {step.subtitle}
                 </p>
-                <p className="text-white/45 text-sm leading-relaxed flex-1">{step.desc}</p>
-
                 {/* Arrow indicator */}
                 <div className="mt-6 flex items-center gap-2 text-[#E7AE06]/40 text-xs tracking-widest uppercase">
                   <div className="flex-1 h-px bg-[#E7AE06]/15" />
