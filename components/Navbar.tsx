@@ -8,6 +8,7 @@ const links = [
   { label: 'Sobre Mí', href: '#sobre-mi' },
   { label: 'Precios', href: '#precios' },
   { label: 'Proceso', href: '#proceso' },
+  { label: 'Agendar Gratis', href: '#agendar', highlight: true },
 ]
 
 export default function Navbar() {
