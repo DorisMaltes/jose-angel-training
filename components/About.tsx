@@ -12,6 +12,11 @@ const credentials = [
     desc: 'Halterofilia — Trayectoria competitiva amplia',
   },
   {
+    icon: '🏆',
+    title: 'Certificado Nivel 2 en Halterofilia',
+    desc: 'Avalado por la Federación Mexicana de Levantamiento de Pesas',
+  },
+  {
     icon: '👥',
     title: 'Atención Personalizada',
     desc: 'Presencial en Villahermosa y online a todo México',
