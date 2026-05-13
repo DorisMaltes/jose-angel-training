@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-screen">
 
         {/* Left: Text content */}
-        <div className="flex flex-col justify-center pt-28 pb-20 lg:pt-0 lg:pb-0 lg:pr-16 z-10">
+        <div className="flex flex-col justify-start pt-28 pb-20 lg:pt-28 lg:pb-8 lg:pr-16 z-10">
 
           {/* Location badge */}
           <div className="inline-flex items-center gap-3 mb-8 animate-fade-in-up">
