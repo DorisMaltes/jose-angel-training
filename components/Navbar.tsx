@@ -54,7 +54,11 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-white/70 hover:text-[#E7AE06] text-sm tracking-widest uppercase transition-colors duration-200"
+                className={
+                  l.highlight
+                    ? 'border border-[#E7AE06]/60 text-[#E7AE06] text-xs font-bold tracking-widest uppercase px-4 py-2 hover:bg-[#E7AE06] hover:text-black transition-all duration-200'
+                    : 'text-white/70 hover:text-[#E7AE06] text-sm tracking-widest uppercase transition-colors duration-200'
+                }
               >
                 {l.label}
               </a>
