@@ -5,6 +5,7 @@ import About from '@/components/About'
 import WhyUs from '@/components/WhyUs'
 import HowItWorks from '@/components/HowItWorks'
 import Pricing from '@/components/Pricing'
+import CalendlySection from '@/components/CalendlySection'
 import ContactCTA from '@/components/ContactCTA'
 import Footer from '@/components/Footer'
 
@@ -19,6 +20,7 @@ export default function Home() {
         <WhyUs />
         <HowItWorks />
         <Pricing />
+        <CalendlySection />
         <ContactCTA />
       </main>
       <Footer />
