@@ -42,10 +42,11 @@ export default function ContactCTA() {
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
           <a
-            href="#servicios"
-            className="inline-flex items-center gap-3 border border-white/20 text-white/70 text-sm tracking-[0.2em] uppercase px-10 py-5 hover:border-[#E7AE06]/50 hover:text-[#E7AE06] transition-all duration-300"
+            href="#agendar"
+            className="inline-flex items-center gap-3 border border-[#E7AE06]/50 text-[#E7AE06] text-sm font-bold tracking-[0.2em] uppercase px-10 py-5 hover:bg-[#E7AE06] hover:text-black transition-all duration-300"
           >
-            Ver Servicios
+            <span>📅</span>
+            Agendar Cita Gratis
           </a>
         </div>
 
