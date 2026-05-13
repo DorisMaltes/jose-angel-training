@@ -41,8 +41,8 @@ export default function Hero() {
 
           {/* Description */}
           <p className="text-white/55 text-base lg:text-lg max-w-md leading-relaxed mb-10 animate-fade-in-up delay-300">
-            Entrenamiento personalizado con la metodología y mentalidad de un atleta de élite.{' '}
-            <span className="text-white/80 font-medium">No vendemos clases — ofrecemos resultados.</span>
+            Cada sesión es una inversión en la mejor versión de ti mismo.{' '}
+            <span className="text-white/80 font-medium">Tu disciplina de hoy construye el cuerpo que quieres mañana.</span>
           </p>
 
           {/* Service tags */}
