@@ -303,40 +303,6 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Projection block */}
-        <div className="mt-16 bg-black border border-[#E7AE06]/20 p-8 lg:p-10">
-          <p className="text-[#E7AE06] text-xs tracking-[0.4em] uppercase font-bold mb-6">
-            Proyección conservadora de ingreso mensual
-          </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            {[
-              { label: '6 clientes Prep. Física Presencial Pro', value: '$6,000' },
-              { label: '5 clientes Halterofilia Presencial Pro', value: '$6,000' },
-              { label: '10 clientes Online (mix básico/pro)', value: '$5,500' },
-              { label: 'Total estimado / mes (21 clientes)', value: '$17,500', highlight: true },
-            ].map((metric) => (
-              <div
-                key={metric.label}
-                className={`p-5 border ${
-                  metric.highlight
-                    ? 'border-[#E7AE06]/40 bg-[#E7AE06]/5'
-                    : 'border-white/8 bg-[#0a0a0a]'
-                }`}
-              >
-                <p className={`font-display text-3xl tracking-wide mb-2 ${
-                  metric.highlight ? 'text-[#E7AE06]' : 'text-white'
-                }`}>
-                  {metric.value}
-                </p>
-                <p className="text-white/35 text-xs leading-snug">{metric.label}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-white/35 text-xs leading-relaxed">
-            Con 21 clientes activos, ingreso mensual recurrente y predecible sin depender de ventas nuevas cada semana.
-          </p>
-        </div>
-
         {/* Bottom note */}
         <div className="mt-8 text-center">
           <p className="text-white/30 text-xs mb-4">
