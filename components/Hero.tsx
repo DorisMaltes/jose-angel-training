@@ -76,11 +76,9 @@ export default function Hero() {
           </div>
 
           {/* Social proof */}
-          <div className="flex items-center gap-6 animate-fade-in-up delay-500">
+          <div className="flex items-center gap-6 animate-fade-in-up delay-500 pb-6">
             <div className="flex items-center gap-3 text-white/30 text-xs tracking-widest uppercase">
-              <span className="text-[#E7AE06] font-bold text-sm">5,482</span>
-              <span>seguidores</span>
-              <span className="w-px h-4 bg-white/15" />
+              
               <span className="text-[#E7AE06] font-bold text-sm">@joseangel_training</span>
             </div>
           </div>
