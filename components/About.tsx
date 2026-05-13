@@ -83,7 +83,7 @@ export default function About() {
 
             <blockquote className="border-l-2 border-[#E7AE06] pl-5 mb-8">
               <p className="text-white/70 text-lg italic leading-relaxed">
-                "No vendemos clases. Ofrecemos resultados."
+                "Tu disciplina de hoy es el cuerpo que tendrás mañana."
               </p>
             </blockquote>
 
