@@ -8,8 +8,6 @@ Landing page profesional para la marca personal de **José Ángel Sánchez**, en
 
 ## Vista previa
 
-### Hero
-![Hero](screenshots/01-hero.png)
 
 ### Servicios
 ![Servicios](screenshots/02-services.png)
