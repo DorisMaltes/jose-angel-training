@@ -3,7 +3,7 @@
 import Script from 'next/script'
 
 const CALENDLY_URL =
-  'https://calendly.com/dorise-maltesc/30min?background_color=0a0a0a&text_color=ffffff&primary_color=e7ae06'
+  'https://calendly.com/joseang2103/30min?background_color=0a0a0a&text_color=ffffff&primary_color=e7ae06'
 
 export default function CalendlySection() {
   return (
