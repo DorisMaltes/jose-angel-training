@@ -37,7 +37,7 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-3" onClick={closeMenu}>
           <div className="relative w-10 h-10 lg:w-12 lg:h-12">
             <Image
-              src="/logo2.png"
+              src={logoNavBar}
               alt="José Ángel Training"
               fill
               className="object-contain"
