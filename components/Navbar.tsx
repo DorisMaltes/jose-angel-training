@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import logoNavBar from '../app/logoNavBar.png'
 
 const links = [
   { label: 'Servicios', href: '#servicios' },
