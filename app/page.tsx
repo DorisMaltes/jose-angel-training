@@ -9,10 +9,12 @@ import Pricing from '@/components/Pricing'
 import CalendlySection from '@/components/CalendlySection'
 import ContactCTA from '@/components/ContactCTA'
 import Footer from '@/components/Footer'
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   return (
     <>
+      <Analytics />
       <Navbar />
       <main>
         <Hero />
