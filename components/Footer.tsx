@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import logoNavbar from '../app/logoNavBar.png'
 
 const navLinks = [
   { label: 'Servicios', href: '#servicios' },
@@ -23,7 +24,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-5">
               <div className="relative w-10 h-10">
                 <Image
-                  src="/logo2.png"
+                  src={logoNavbar}
                   alt="José Ángel Training"
                   fill
                   className="object-contain"
