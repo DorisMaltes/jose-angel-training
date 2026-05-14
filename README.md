@@ -129,4 +129,4 @@ No se requieren variables de entorno.
 ## Redes
 
 - Instagram: [@joseangel_training](https://www.instagram.com/joseangel_training)
-- Calendly: [Agendar sesión gratuita](https://calendly.com/dorise-maltesc/30min)
+- Calendly: [Agendar sesión gratuita](https://calendly.com/joseang2103/30min)
