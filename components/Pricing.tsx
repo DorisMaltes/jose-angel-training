@@ -15,7 +15,7 @@ type Service = {
   title: string
   icon: string
   basic: Plan
-  pro: Plan
+  pro?: Plan
 }
 
 const presencialServices: Service[] = [
@@ -25,12 +25,12 @@ const presencialServices: Service[] = [
     icon: '⚡',
     basic: {
       label: 'Básico',
-      price: '$600',
-      sessions: '4 sesiones / mes',
-      note: '≈ $150 por sesión · Plan mensual incluido',
+      price: '$650',
+      sessions: '2 sesiones / semana',
+      note: '≈ 8 sesiones al mes · Plan mensual incluido',
       features: [
         'Plan de entrenamiento mensual personalizado',
-        '4 sesiones presenciales en espacio equipado',
+        '2 sesiones presenciales por semana en espacio equipado',
         'Corrección técnica en tiempo real',
         'Comunicación directa con José Ángel',
       ],
@@ -38,11 +38,11 @@ const presencialServices: Service[] = [
     pro: {
       label: 'Pro',
       price: '$1,000',
-      sessions: '8 sesiones / mes',
-      note: '≈ $125 por sesión · Seguimiento + ajustes semanales',
+      sessions: '4 sesiones / semana',
+      note: '≈ 16 sesiones al mes · Seguimiento + ajustes semanales',
       features: [
         'Todo lo del Plan Básico',
-        '8 sesiones presenciales en espacio equipado',
+        '4 sesiones presenciales por semana en espacio equipado',
         'Seguimiento semanal de progreso',
         'Ajuste de cargas y plan mensual',
         'Acceso prioritario a José Ángel',
@@ -55,12 +55,12 @@ const presencialServices: Service[] = [
     icon: '🏋️',
     basic: {
       label: 'Básico',
-      price: '$700',
-      sessions: '4 sesiones / mes',
-      note: '≈ $175 por sesión · Nivel básico–intermedio',
+      price: '$850',
+      sessions: '3 sesiones / semana',
+      note: '≈ 12 sesiones al mes · Nivel básico–intermedio',
       features: [
         'Técnica de arranque y envión desde básico',
-        '4 sesiones con barra y plataforma completa',
+        '3 sesiones por semana con barra y plataforma completa',
         'Corrección de errores técnicos',
         'Comunicación directa con José Ángel',
       ],
@@ -68,11 +68,11 @@ const presencialServices: Service[] = [
     pro: {
       label: 'Pro',
       price: '$1,200',
-      sessions: '8 sesiones / mes',
-      note: '≈ $150 por sesión · Hasta nivel avanzado / competencia',
+      sessions: '4 sesiones / semana',
+      note: '≈ 16 sesiones al mes · Hasta nivel avanzado / competencia',
       features: [
         'Todo lo del Plan Básico',
-        '8 sesiones con plataforma completa',
+        '4 sesiones por semana con plataforma completa',
         'Preparación para competencia',
         'Ajuste semanal de progresión técnica',
         'Evaluación de video de levantamientos',
@@ -88,27 +88,14 @@ const onlineServices: Service[] = [
     icon: '⚡',
     basic: {
       label: 'Básico',
-      price: '$350',
-      sessions: 'Plan + 2 check-ins/mes',
-      note: 'Ajuste quincenal por mensaje o video',
+      price: '$650',
+      sessions: 'Plan de entrenamiento cada 2 semanas',
+      note: '2 videollamadas al mes · Retroalimentación continua por mensaje',
       features: [
-        'Plan mensual personalizado digital',
-        '2 check-ins quincenales de seguimiento',
-        'Retroalimentación por mensaje o video',
-        'Disponible para cualquier ciudad de México',
-      ],
-    },
-    pro: {
-      label: 'Pro',
-      price: '$600',
-      sessions: 'Plan + seguimiento semanal',
-      note: 'Retroalimentación semanal + revisión de videos',
-      features: [
-        'Plan mensual personalizado digital',
-        'Seguimiento semanal de progreso',
-        'Revisión y retroalimentación de videos enviados',
-        'Ajuste continuo del plan',
-        'Comunicación directa prioritaria',
+        'Plan de entrenamiento actualizado cada 2 semanas',
+        '2 sesiones de retroalimentación al mes: envías tu video de entrenamiento y José Ángel te da su retroalimentación',
+        'Videollamada quincenal para platicar progreso, explicar el plan, ajustar y retroalimentación general',
+        'Disponible en todo México',
       ],
     },
   },
@@ -118,37 +105,26 @@ const onlineServices: Service[] = [
     icon: '🏋️',
     basic: {
       label: 'Básico',
-      price: '$450',
-      sessions: 'Plan + análisis quincenal',
-      note: 'Plan de progresión + revisión de video cada 2 semanas',
+      price: '$1,000',
+      sessions: 'Plan de entrenamiento semanal',
+      note: '4 videollamadas al mes · Una por semana',
       features: [
-        'Plan de progresión técnica personalizado',
-        'Análisis de video quincenal de levantamientos',
-        'Corrección técnica a distancia',
-        'Disponible para cualquier ciudad de México',
-      ],
-    },
-    pro: {
-      label: 'Pro',
-      price: '$800',
-      sessions: 'Plan + análisis semanal',
-      note: 'Retroalimentación técnica semanal + corrección en video',
-      features: [
-        'Plan de progresión técnica completo',
-        'Análisis de video semanal detallado',
-        'Corrección técnica con retroalimentación inmediata',
-        'Preparación para competencia a distancia',
-        'Acceso prioritario a José Ángel',
+        'Plan de entrenamiento actualizado cada semana',
+        '4 videollamadas al mes (una por semana) para platicar avances, ajustar técnica y retroalimentación',
+        'Seguimiento continuo de progresión técnica',
+        'Disponible en todo México',
       ],
     },
   },
 ]
 
-function ServiceCard({ service, featured }: { service: Service; featured?: boolean }) {
+function ServiceCard({ service }: { service: Service }) {
+  const hasPro = !!service.pro
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className={`grid grid-cols-1 ${hasPro ? 'sm:grid-cols-2' : ''} gap-4`}>
       {/* Basic plan */}
-      <div className="bg-[#0a0a0a] border border-white/8 p-6 hover:border-white/20 transition-colors">
+      <div className={`bg-[#0a0a0a] border border-white/8 p-6 hover:border-white/20 transition-colors ${!hasPro ? 'max-w-md' : ''}`}>
         <div className="flex items-center gap-2 mb-4">
           <span className="text-lg">{service.icon}</span>
           <div>
@@ -181,43 +157,45 @@ function ServiceCard({ service, featured }: { service: Service; featured?: boole
       </div>
 
       {/* Pro plan */}
-      <div className="relative bg-[#111111] border border-[#E7AE06]/40 p-6">
-        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#E7AE06] to-[#AF7503]" />
-        <div className="absolute top-3 right-3">
-          <span className="bg-[#E7AE06] text-black text-[9px] font-bold tracking-widest uppercase px-2 py-0.5">
-            RECOMENDADO
-          </span>
-        </div>
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-lg">{service.icon}</span>
-          <div>
-            <p className="text-white text-xs font-bold tracking-wide">{service.title}</p>
-            <p className="text-[10px] text-[#E7AE06] tracking-widest uppercase font-bold">{service.pro.label}</p>
+      {hasPro && service.pro && (
+        <div className="relative bg-[#111111] border border-[#E7AE06]/40 p-6">
+          <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#E7AE06] to-[#AF7503]" />
+          <div className="absolute top-3 right-3">
+            <span className="bg-[#E7AE06] text-black text-[9px] font-bold tracking-widest uppercase px-2 py-0.5">
+              RECOMENDADO
+            </span>
           </div>
-        </div>
-        <div className="mb-4">
-          <div className="flex items-baseline gap-1">
-            <span className="font-display text-4xl text-[#E7AE06] tracking-wide">{service.pro.price}</span>
-            <span className="text-white/40 text-xs">MXN / mes</span>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-lg">{service.icon}</span>
+            <div>
+              <p className="text-white text-xs font-bold tracking-wide">{service.title}</p>
+              <p className="text-[10px] text-[#E7AE06] tracking-widest uppercase font-bold">{service.pro.label}</p>
+            </div>
           </div>
-          <p className="text-[#E7AE06]/80 text-xs mt-1">{service.pro.sessions}</p>
-          <p className="text-white/30 text-xs mt-0.5">{service.pro.note}</p>
+          <div className="mb-4">
+            <div className="flex items-baseline gap-1">
+              <span className="font-display text-4xl text-[#E7AE06] tracking-wide">{service.pro.price}</span>
+              <span className="text-white/40 text-xs">MXN / mes</span>
+            </div>
+            <p className="text-[#E7AE06]/80 text-xs mt-1">{service.pro.sessions}</p>
+            <p className="text-white/30 text-xs mt-0.5">{service.pro.note}</p>
+          </div>
+          <ul className="space-y-2 mb-6">
+            {service.pro.features.map((f) => (
+              <li key={f} className="flex items-start gap-2">
+                <span className="text-[#E7AE06] text-xs mt-0.5 flex-shrink-0">✓</span>
+                <span className="text-white/65 text-xs leading-snug">{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#contacto"
+            className="block w-full text-center bg-[#E7AE06] text-black text-[10px] font-bold tracking-widest uppercase py-3 hover:bg-[#AF7503] transition-colors"
+          >
+            Elegir Plan Pro →
+          </a>
         </div>
-        <ul className="space-y-2 mb-6">
-          {service.pro.features.map((f) => (
-            <li key={f} className="flex items-start gap-2">
-              <span className="text-[#E7AE06] text-xs mt-0.5 flex-shrink-0">✓</span>
-              <span className="text-white/65 text-xs leading-snug">{f}</span>
-            </li>
-          ))}
-        </ul>
-        <a
-          href="#contacto"
-          className="block w-full text-center bg-[#E7AE06] text-black text-[10px] font-bold tracking-widest uppercase py-3 hover:bg-[#AF7503] transition-colors"
-        >
-          Elegir Plan Pro →
-        </a>
-      </div>
+      )}
     </div>
   )
 }
